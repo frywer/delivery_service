@@ -6,14 +6,17 @@ import TableCell from '@material-ui/core/TableCell';
 import TableHead from '@material-ui/core/TableHead';
 import TableRow from '@material-ui/core/TableRow';
 import Typography from '@material-ui/core/Typography';
+import Grid from '@material-ui/core/Grid';
 import Paper from '@material-ui/core/Paper';
 import { useSelector } from "react-redux";
+import NewDelivery from './NewDelivery'
 
 const useStyles = makeStyles(theme => ({
     root: {
-        width: '100%',
         marginTop: theme.spacing(3),
         overflowX: 'auto',
+        marginRight: theme.spacing(1),
+        marginLeft: theme.spacing(1),
     },
     table: {
         minWidth: 650,
@@ -44,9 +47,16 @@ export default function Deliveries() {
 
     return (
         <Paper className={classes.root}>
-            <Typography variant="h4" gutterBottom>
-               My deliveries
-            </Typography>
+            <Grid container>
+                <Grid item xs={10}>
+                    <Typography variant="h4" gutterBottom>
+                        My deliveries
+                    </Typography>
+                </Grid>
+                <Grid item xs={2}>
+                    <NewDelivery />
+                </Grid>
+            </Grid>
             <Table className={classes.table}>
                 <TableHead>
                     <TableRow>

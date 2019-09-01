@@ -5,7 +5,4 @@ class Delivery < ApplicationRecord
   validates :from_user_id, :to_user_id, :item, :delivery_address, :status, presence: true
   enum status: [:pending, :canceled, :delivered]
 
-  # def editable?
-  #   current_user
-  # end
 end

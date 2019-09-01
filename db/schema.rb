@@ -13,11 +13,11 @@
 ActiveRecord::Schema.define(version: 2019_09_01_000551) do
 
   create_table "deliveries", force: :cascade do |t|
-    t.integer "from_user_id"
-    t.integer "to_user_id"
-    t.string "item"
-    t.string "delivery_address"
-    t.integer "status"
+    t.integer "from_user_id", null: false
+    t.integer "to_user_id", null: false
+    t.string "item", null: false
+    t.string "delivery_address", null: false
+    t.integer "status", default: 0
     t.datetime "created_at", precision: 6, null: false
     t.datetime "updated_at", precision: 6, null: false
   end
@@ -34,7 +34,6 @@ ActiveRecord::Schema.define(version: 2019_09_01_000551) do
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
     t.string "unconfirmed_email"
-    t.string "name"
     t.string "email"
     t.boolean "admin", default: false
     t.text "tokens"
