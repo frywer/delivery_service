@@ -1,24 +1,44 @@
-# README
+Delivery service
+==================
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+This application provide delivery service and allow users send gifts to each other.
 
-Things you may want to cover:
+Compatibility
+-------------
+* Ruby 2.5 or higher
 
-* Ruby version
+Installation and Setup
+----------------------
 
-* System dependencies
+1) Clone or [download](https://github.com/frywer/delivery_service/archive/master.zip) this repo
 
-* Configuration
+```
+$ git git@github.com:frywer/delivery_service.git
+```
+2) Download ruby dependencies
+```
+$ bundle install
+```
+3) Download react dependencies
+```
+$ yarn install
+```
+4) Running migrations
+```
+$ bundle exec rails db:migrate RAILS_ENV=production
+```
+5) Running assets compilation
+```
+$ bundle exec rails assets:precompile RAILS_ENV=production
+```
+* If you are want to run application in development mode execute next command
 
-* Database creation
-
-* Database initialization
-
-* How to run the test suite
-
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+```
+$ rails server
+```
+Usage
+----------------------
+1) Open application in browser
+2) If you does no have account yet, press button **Sign Up** and fill form.
+3) After authentication you will see deliveries you have received from other people.
+4) Press button **New delivery** to send new delivery to other users.
