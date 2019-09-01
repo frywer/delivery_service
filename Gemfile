@@ -59,3 +59,7 @@ group :development, :test do
 end
 
 gem 'devise_token_auth', github: 'lynndylanhurley/devise_token_auth'
+gem 'react-rails'
+# gem 'devise'
+# gem 'active_model_serializers'
+gem 'pry'
