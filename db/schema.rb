@@ -10,7 +10,17 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 2019_08_31_212912) do
+ActiveRecord::Schema.define(version: 2019_09_01_000551) do
+
+  create_table "deliveries", force: :cascade do |t|
+    t.integer "from_user_id"
+    t.integer "to_user_id"
+    t.string "item"
+    t.string "delivery_address"
+    t.integer "status"
+    t.datetime "created_at", precision: 6, null: false
+    t.datetime "updated_at", precision: 6, null: false
+  end
 
   create_table "users", force: :cascade do |t|
     t.string "provider", default: "email", null: false
@@ -23,10 +33,6 @@ ActiveRecord::Schema.define(version: 2019_08_31_212912) do
     t.string "confirmation_token"
     t.datetime "confirmed_at"
     t.datetime "confirmation_sent_at"
-    t.string "unconfirmed_email"
-    t.string "name"
-    t.string "nickname"
-    t.string "image"
     t.string "email"
     t.text "tokens"
     t.datetime "created_at", precision: 6, null: false
