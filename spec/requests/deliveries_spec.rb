@@ -4,7 +4,7 @@ RSpec.describe "Deliveries", type: :request do
 
   before(:each) do
     allow_any_instance_of(DeliveriesController).
-        to receive(:authenticate_user!).and_return(true)
+        to receive_messages(authenticate_user!: true, require_admin!: true)
   end
 
   describe "GET /deliveries" do
