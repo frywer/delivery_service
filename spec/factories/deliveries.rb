@@ -1,9 +1,9 @@
 FactoryBot.define do
   factory :delivery do
-    from_user_id { 1 }
-    to_user_id { 1 }
+    association :to_user, factory: :user
+    association :from_user, factory: :user
     item { "MyString" }
     delivery_address { "MyString" }
-    status { 1 }
+    status { 'pending' }
   end
 end

@@ -1,4 +1,7 @@
 class DeliveriesController < ApplicationController
+  # protect_from_forgery with: :null_session
+
+  before_action :authenticate_user!
   before_action :set_delivery, only: [:show, :edit, :update, :destroy]
   # before_action :require_admin!, only: [:index, :destroy]
 

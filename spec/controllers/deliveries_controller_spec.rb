@@ -6,11 +6,11 @@ RSpec.describe DeliveriesController, type: :controller do
   let(:recipient) { FactoryBot.create(:user) }
 
   let(:valid_attributes) {
-    { from_user_id: sender.id, to_user_id: recipient.id, item: 'sample item', delivery_address: 'Ling Rd', status: 'new_status' }
+    { from_user_id: sender.id, to_user_id: recipient.id, item: 'sample item', delivery_address: 'Ling Rd', status: 'pending' }
   }
 
   let(:invalid_attributes) {
-    { from_user_id: nil, to_user_id: nil, item: 'sample item', delivery_address: 'Ling Rd', status: 'new_status' }
+    { from_user_id: nil, to_user_id: nil, item: 'sample item', delivery_address: 'Ling Rd', status: 'pending' }
   }
 
   before(:each) do

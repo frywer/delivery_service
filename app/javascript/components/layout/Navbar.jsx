@@ -41,7 +41,7 @@ export default function Navbar() {
                     dispatch(setCurrentUser(null))
                     dispatch(setUid(null))
                 } else {
-
+                    console.log(`error ---------> ${response.error}`)
                 }
             })
     }
@@ -54,7 +54,7 @@ export default function Navbar() {
                         TOSHI deliveries
                     </Typography>
                     { current_user && current_user.email }
-                    { current_user && <Button color="inherit" onClick={logOut}>Log out</Button> }
+                    { current_user && <Button color="inherit" onClick={ logOut }>Log out</Button> }
                 </Toolbar>
             </AppBar>
         </div>
