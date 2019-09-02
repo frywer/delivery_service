@@ -1,6 +1,6 @@
 class DeliveriesController < ApplicationController
   before_action :authenticate_user!
-  before_action :set_delivery, only: [:show, :edit, :update, :destroy]
+  before_action :set_delivery, only: [:show, :update, :destroy]
   before_action :require_admin!, only: [:index, :destroy, :update]
 
   # GET /deliveries.json

@@ -2,6 +2,7 @@ Delivery service
 ==================
 
 This application provide delivery service and allow users send gifts to each other.
+[Online demo](https://lit-retreat-17021.herokuapp.com)
 
 Compatibility
 -------------
@@ -13,7 +14,7 @@ Installation and Setup
 1) Clone or [download](https://github.com/frywer/delivery_service/archive/master.zip) this repo
 
 ```
-$ git git@github.com:frywer/delivery_service.git
+$ git clone https://github.com/frywer/delivery_service.git
 ```
 2) Download ruby dependencies
 ```
@@ -23,6 +24,11 @@ $ bundle install
 ```
 $ yarn install
 ```
+3) Create database
+```
+$ bundle exec rails db:create
+```
+
 4) Running migrations
 ```
 $ bundle exec rails db:migrate RAILS_ENV=production
