@@ -2,6 +2,7 @@ Delivery service
 ==================
 
 This application provide delivery service and allow users send gifts to each other.
+
 [Online demo](https://lit-retreat-17021.herokuapp.com)
 
 Compatibility
@@ -16,26 +17,29 @@ Installation and Setup
 ```
 $ git clone https://github.com/frywer/delivery_service.git
 ```
-2) Download ruby dependencies
+2) Move to repository
+```
+$ cd delivery_service
+```
+3) Download ruby dependencies
 ```
 $ bundle install
 ```
-3) Download react dependencies
+4) Download react dependencies
 ```
 $ yarn install
 ```
-3) Create database
+5) Create database
 ```
 $ bundle exec rails db:create
 ```
-
-4) Running migrations
+6) Running migrations
 ```
-$ bundle exec rails db:migrate RAILS_ENV=production
+$ bundle exec rails db:migrate
 ```
-5) Running assets compilation
+7) Running assets compilation
 ```
-$ bundle exec rails assets:precompile RAILS_ENV=production
+$ bundle exec rails assets:precompile
 ```
 * If you are want to run application in development mode execute next command
 
